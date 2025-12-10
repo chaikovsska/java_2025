@@ -1,10 +1,8 @@
-package model;
+package task2.model;
 
 import java.io.Serializable;
 
-// 3. Застосуйте серіалізацію (implements Serializable)
 public abstract class Shape implements Drawable, Serializable {
-    // serialVersionUID рекомендується для контролю версій класу при серіалізації
     private static final long serialVersionUID = 1L;
 
     protected String shapeColor;

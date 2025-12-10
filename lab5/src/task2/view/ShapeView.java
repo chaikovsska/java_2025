@@ -1,6 +1,7 @@
-package view;
+package task2.view;
 
-import model.Shape;
+import task2.model.Shape;
+
 import java.util.Scanner;
 
 public class ShapeView {
@@ -27,7 +28,6 @@ public class ShapeView {
         System.out.println(message);
     }
 
-    // Метод для виведення меню
     public void printMenu() {
         System.out.println("\n--- MENU ---");
         System.out.println("1. Generate new random shapes");
@@ -35,25 +35,23 @@ public class ShapeView {
         System.out.println("3. Calculate total area");
         System.out.println("4. Sort by Area");
         System.out.println("5. Sort by Color");
-        System.out.println("6. Save shapes to file"); // Нова команда
-        System.out.println("7. Load shapes from file"); // Нова команда
-        System.out.println("8. Find shapes (Search)"); // Пошук
+        System.out.println("6. Save shapes to file");
+        System.out.println("7. Load shapes from file");
+        System.out.println("8. Find shapes (Search)");
         System.out.println("0. Exit");
         System.out.print("Select an option: ");
     }
 
-    // Метод для зчитування рядків (для імен файлів тощо)
     public String getInput(String prompt) {
         System.out.print(prompt);
-        return scanner.next(); // Використовуємо next() для простоти читання слова (імені файлу)
+        return scanner.next();
     }
 
-    // Метод для зчитування чисел з перевіркою
     public double getDoubleInput(String prompt) {
         System.out.print(prompt);
         while (!scanner.hasNextDouble()) {
             System.out.println("Invalid input. Please enter a number.");
-            scanner.next(); // очистка буфера
+            scanner.next();
         }
         return scanner.nextDouble();
     }
